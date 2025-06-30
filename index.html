@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>やましん式 24V電源構成図</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 2rem;
+    }
+    .box {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 0;
+      color: #2e7d32;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .component {
+      border-left: 4px solid #2e7d32;
+      padding-left: 1rem;
+      background: #eef9ee;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>▶ 基本構成 (24V電源)</h2>
+    <div class="grid">
+      <div class="component">
+        <h3>⚡ 24V LiFePO₄ バッテリー</h3>
+        <ul>
+          <li>Renogy Smart LiFePO₄ 24V 100Ah</li>
+          <li>Bluetooth監視</li>
+        </ul>
+      </div>
+      <div class="component">
+        <h3>☀️ 24V MPPT充電コントローラー</h3>
+        <ul>
+          <li>Renogy Rover 40A MPPT</li>
+          <li>PV入力: 直連ソーラー200W × 2</li>
+        </ul>
+      </div>
+      <div class="component">
+        <h3>💡 正弦波 24V インバーター</h3>
+        <ul>
+          <li>Renogy 2000W Pure Sine Wave Inverter</li>
+          <li>AC100V入力対応</li>
+        </ul>
+      </div>
+      <div class="component">
+        <h3>⛽ DC-DC変換器</h3>
+        <ul>
+          <li>24V → 12V 10A~30A</li>
+          <li>ルーターや電装品用</li>
+        </ul>
+      </div>
+      <div class="component">
+        <h3>🛋 モニター監視 / 充電コントロール</h3>
+        <ul>
+          <li>Renogy Battery Monitor</li>
+          <li>BT-2 / DC Home App</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>▶ 運用シナリオ</h2>
+    <ul>
+      <li>家畜車中に設置し、PTO発電機への交流も検討</li>
+      <li>備措電源、移動操作ボックス、カメラ/ルーター電源に対応</li>
+      <li>寒冷地対応のため、バッテリーは加熱機能付きを選択</li>
+    </ul>
+  </div>
+</body>
+</html>
