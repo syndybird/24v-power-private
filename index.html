@@ -35,6 +35,35 @@
       padding-left: 1rem;
       background: #eef9ee;
     }
+    .diagram-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #e8f5e9;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .diagram-layer {
+      background: #c8e6c9;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      margin: 0.5rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .branch {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .branch div {
+      background: #a5d6a7;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      flex: 1;
+      margin: 0 0.5rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +115,25 @@
       <li>備措電源、移動操作ボックス、カメラ/ルーター電源に対応</li>
       <li>寒冷地対応のため、バッテリーは加熱機能付きを選択</li>
     </ul>
+  </div>
+
+  <div class="box">
+    <h2>▶ 目指す集電層構造（電源ピラミッド）</h2>
+    <div class="diagram-container">
+      <div class="diagram-layer">
+        🚚 ポタ電化車体（24Vシステム中枢）
+      </div>
+      <div class="branch">
+        <div>🔌 AC分電 → EcoFlow Delta</div>
+        <div>🔋 DC-DC分電 → ルーター / カメラ</div>
+      </div>
+      <div class="diagram-layer">
+        🛰 サテライト拠点：テクステ、洗車場、センサ基地など
+      </div>
+      <div class="diagram-layer">
+        🔁 移動用途：Delta取り外し → 持ち出し活用OK
+      </div>
+    </div>
   </div>
 </body>
 </html>
